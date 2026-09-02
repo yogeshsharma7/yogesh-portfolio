@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yogesh Sharma — Climate Risk & AgriTech Engineer</title>
+  <meta name="description" content="Yogesh Sharma — Operations Officer & Software Engineer working in climate risk analytics, agricultural insurance and satellite/weather data systems in Nepal." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    :root {
+      --ink: #182420;
+      --ink-2: #22342d;
+      --paper: #e7e2d1;
+      --paper-2: #dcd6c2;
+      --teal: #2f5d57;
+      --teal-light: #4c7c73;
+      --gold: #c68a34;
+      --clay: #9c5b3c;
+      --line: #b9b2a0;
+      --line-dark: rgba(231, 226, 209, 0.25);
+      --max: 1200px;
+      --shadow: 0 8px 30px rgba(0,0,0,0.12);
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      margin: 0;
+      color: var(--ink);
+    }
+    .mono {
+      font-family: 'IBM Plex Mono', monospace;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+    ::selection {
+      background: var(--gold);
+      color: var(--ink);
+    }
+
+    /* ----- NAVIGATION ----- */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(24, 36, 32, 0.92);
+      backdrop-filter: blur(12px);
+      padding: 16px 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(231, 226, 209, 0.1);
+    }
+    nav .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      font-family: 'Fraunces', serif;
+      font-size: 22px;
+      color: var(--paper);
+      font-weight: 600;
+    }
+    nav .logo span {
+      color: var(--gold);
+    }
+    nav ul {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+    nav ul a {
+      color: #c8c2ac;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+      position: relative;
+    }
+    nav ul a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+    nav ul a:hover {
+      color: var(--paper);
+    }
+    nav ul a:hover::after {
+      transform: scaleX(1);
+    }
+    .menu-toggle {
+      display: none;
+      color: var(--paper);
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* ----- HERO ----- */
+    .hero {
+      background: linear-gradient(165deg, var(--ink) 0%, var(--ink-2) 100%);
+      color: var(--paper);
+      position: relative;
+      overflow: hidden;
+      padding: 140px 0 80px;
+      margin-top: 74px;
+    }
+    .hero svg.contours {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.25;
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero .eyebrow {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      letter-spacing: 0.02em;
+      color: var(--gold);
+      margin-bottom: 18px;
+      opacity: 0;
+      animation: rise 0.7s ease-out 0.05s forwards;
+    }
+    .hero h1 {
+      font-size: clamp(40px, 5vw, 58px);
+      line-height: 1.02;
+      color: var(--paper);
+      opacity: 0;
+      animation: rise 0.8s ease-out 0.15s forwards;
+    }
+    .hero .role {
+      font-size: 19px;
+      margin-top: 16px;
+      color: #c8c2ac;
+      max-width: 520px;
+      opacity: 0;
+      animation: rise 0.8s ease-out 0.3s forwards;
+    }
+    .hero .contact-line {
+      margin-top: 28px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      color: #a8a290;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+      opacity: 0;
+      animation: rise 0.8s ease-out 0.42s forwards;
+    }
+    .contact-line a {
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .contact-line a:hover {
+      border-bottom-color: var(--gold);
+    }
+
+    /* Profile Photo */
+    .hero-photo {
+      position: relative;
+      opacity: 0;
+      animation: rise 0.8s ease-out 0.25s forwards;
+    }
+    .hero-photo .photo-frame {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid var(--gold);
+      box-shadow: 0 0 60px rgba(198, 138, 52, 0.2);
+      margin-left: auto;
+      background: var(--teal-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-photo .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-photo .photo-placeholder {
+      font-size: 72px;
+      color: var(--paper);
+      opacity: 0.5;
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .readout {
+      margin-top: 56px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--line-dark);
+      opacity: 0;
+      animation: rise 0.9s ease-out 0.55s forwards;
+    }
+    .readout div {
+      padding: 18px 16px 0 0;
+      border-right: 1px solid var(--line-dark);
+    }
+    .readout div:last-child {
+      border-right: none;
+    }
+    .readout .num {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 26px;
+      color: var(--gold);
+      display: block;
+    }
+    .readout .lbl {
+      font-size: 12px;
+      color: #a8a290;
+      margin-top: 4px;
+      display: block;
+      line-height: 1.4;
+    }
+
+    /* ----- SECTIONS ----- */
+    section {
+      padding: 80px 0;
+    }
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 40px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 14px;
+    }
+    .section-head .tag {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      color: var(--teal);
+    }
+    .section-head h2 {
+      font-size: 32px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .about-text p {
+      max-width: 64ch;
+      color: #33261e;
+    }
+    .about-text p + p {
+      margin-top: 16px;
+    }
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .stat-card {
+      background: var(--paper-2);
+      padding: 24px;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+    .stat-card .number {
+      font-family: 'Fraunces', serif;
+      font-size: 36px;
+      color: var(--teal);
+      display: block;
+    }
+    .stat-card .label {
+      font-size: 14px;
+      color: #5a5344;
+      margin-top: 4px;
+      display: block;
+    }
+
+    /* Experience */
+    .timeline {
+      border-left: 1px solid var(--line);
+      margin-left: 4px;
+    }
+    .role-item {
+      position: relative;
+      padding: 0 0 40px 28px;
+    }
+    .role-item:last-child {
+      padding-bottom: 4px;
+    }
+    .role-item::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 4px;
+      width: 9px;
+      height: 9px;
+      background: var(--paper);
+      border: 2px solid var(--teal);
+      border-radius: 50%;
+    }
+    .role-item .when {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      color: var(--teal);
+    }
+    .role-item h3 {
+      font-size: 20px;
+      margin-top: 6px;
+    }
+    .role-item .org {
+      font-size: 14px;
+      color: #5a5344;
+      margin-top: 2px;
+    }
+    .role-item ul {
+      margin: 14px 0 0;
+      padding-left: 18px;
+      color: #33261e;
+      font-size: 15.5px;
+    }
+    .role-item li + li {
+      margin-top: 6px;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .gallery-item {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 1;
+      background: var(--paper-2);
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .gallery-item:hover {
+      transform: scale(1.02);
+      box-shadow: var(--shadow);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .gallery-item .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(24, 36, 32, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+      color: var(--paper);
+      padding: 20px;
+      text-align: center;
+    }
+    .gallery-item:hover .overlay {
+      opacity: 1;
+    }
+    .gallery-item .overlay span {
+      font-size: 14px;
+    }
+    .gallery-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--paper-2);
+      font-size: 48px;
+      color: var(--line);
+      aspect-ratio: 1;
+      border-radius: 12px;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+    .lightbox.active {
+      display: flex;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+    }
+    .lightbox .close {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      color: white;
+      font-size: 40px;
+      cursor: pointer;
+    }
+
+    /* Projects */
+    .proj-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .proj-card {
+      background: var(--paper-2);
+      padding: 32px;
+      border-radius: 12px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .proj-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+    .proj-card .when {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      color: var(--teal);
+    }
+    .proj-card h3 {
+      font-size: 20px;
+      margin-top: 8px;
+    }
+    .proj-card p {
+      margin-top: 8px;
+      font-size: 15.5px;
+      color: #33261e;
+    }
+
+    /* Publications */
+    .pub {
+      padding: 16px 0;
+      border-top: 1px solid var(--line);
+      font-size: 15.5px;
+    }
+    .pub:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+    .pub .kind {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: var(--teal);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .pub a {
+      text-decoration: underline;
+      text-decoration-color: var(--line);
+      transition: color 0.2s;
+    }
+    .pub a:hover {
+      color: var(--clay);
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .skills-grid .grp {
+      background: var(--paper-2);
+      padding: 24px;
+      border-radius: 12px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .skills-grid .grp:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+    .skills-grid .grp .lbl {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      color: var(--teal);
+      display: block;
+      margin-bottom: 8px;
+    }
+    .skills-grid .grp p {
+      margin: 0;
+      font-size: 15.5px;
+      color: #33261e;
+    }
+
+    /* Education */
+    .edu-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+    .edu-item {
+      margin-bottom: 18px;
+    }
+    .edu-item .deg {
+      font-size: 16.5px;
+      font-weight: 500;
+    }
+    .edu-item .sch {
+      font-size: 14px;
+      color: #5a5344;
+    }
+    .cert-list {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 15.5px;
+      color: #33261e;
+    }
+    .cert-list li + li {
+      margin-top: 8px;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 64px 0 40px;
+    }
+    footer .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+    footer h2 {
+      color: var(--paper);
+      font-size: 30px;
+      max-width: 420px;
+    }
+    footer .contact-block {
+      margin-top: 28px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 15px;
+      color: #c8c2ac;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    footer .contact-block a {
+      border-bottom: 1px solid rgba(198, 138, 52, 0.4);
+      transition: border-color 0.2s;
+    }
+    footer .contact-block a:hover {
+      border-bottom-color: var(--gold);
+    }
+    footer .social-links {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    footer .social-links a {
+      font-size: 24px;
+      color: #a8a290;
+      transition: color 0.2s, transform 0.2s;
+    }
+    footer .social-links a:hover {
+      color: var(--gold);
+      transform: translateY(-2px);
+    }
+    footer .foot-note {
+      margin-top: 48px;
+      font-size: 12px;
+      color: #6b6656;
+      border-top: 1px solid var(--line-dark);
+      padding-top: 20px;
+      grid-column: 1 / -1;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-photo .photo-frame {
+        margin: 0 auto;
+        width: 200px;
+        height: 200px;
+      }
+      .hero .role {
+        max-width: 100%;
+      }
+      .hero .contact-line {
+        justify-content: center;
+      }
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .proj-grid {
+        grid-template-columns: 1fr;
+      }
+      .skills-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .edu-grid {
+        grid-template-columns: 1fr;
+      }
+      footer .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(24, 36, 32, 0.98);
+        padding: 20px 28px;
+        gap: 16px;
+        border-bottom: 1px solid var(--line-dark);
+      }
+      nav ul.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .readout {
+        grid-template-columns: 1fr 1fr;
+      }
+      .readout div {
+        border-right: none;
+        border-bottom: 1px solid var(--line-dark);
+        padding-bottom: 14px;
+      }
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+      section {
+        padding: 48px 0;
+      }
+      .hero {
+        padding: 120px 0 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="wrap">
+      <div class="logo">Yogesh<span>.</span></div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul id="navMenu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <svg class="contours" viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M-20,420 C120,380 200,460 340,410 C460,370 520,440 660,400 C740,375 780,410 820,390" stroke="#4c7c73" stroke-width="1" fill="none" />
+      <path d="M-20,450 C140,410 220,480 360,440 C480,400 540,460 680,430 C750,410 790,440 820,420" stroke="#4c7c73" stroke-width="1" fill="none" />
+      <path d="M-20,60 C160,20 260,90 400,50 C520,15 600,80 760,40 C800,28 810,45 820,55" stroke="#4c7c73" stroke-width="1" fill="none" />
+      <path d="M-20,90 C180,50 280,120 420,80 C540,45 620,110 780,70 C800,64 815,75 820,85" stroke="#4c7c73" stroke-width="1" fill="none" />
+      <path d="M-20,130 C200,90 300,150 440,120 C560,90 640,140 800,105" stroke="#4c7c73" stroke-width="1" fill="none" />
+    </svg>
+    <div class="wrap hero-inner">
+      <div class="hero-text">
+        <div class="eyebrow mono"><i class="fas fa-map-pin"></i> Nepalgunj, Nepal</div>
+        <h1>Yogesh Sharma</h1>
+        <p class="role">Operations Officer &amp; Software Engineer working across climate risk analytics, agricultural insurance systems and applied machine learning — building the digital rails that get satellite and weather data into farmers' hands.</p>
+        <div class="contact-line">
+          <a href="tel:+9779868179179"><i class="fas fa-phone"></i> +977 9868179179</a>
+          <span>·</span>
+          <a href="mailto:yogeshpoudel7@gmail.com"><i class="fas fa-envelope"></i> yogeshpoudel7@gmail.com</a>
+          <span>·</span>
+          <span><i class="fas fa-location-dot"></i> Khajura-08, Nepalgunj</span>
+        </div>
+        <div class="readout">
+          <div><span class="num mono">1,000+</span><span class="lbl">farmers reached across 6+ districts</span></div>
+          <div><span class="num mono">NPR 1cr+</span><span class="lbl">in incubation &amp; project funding</span></div>
+          <div><span class="num mono">30 yrs</span><span class="lbl">rainfall data for drought modelling</span></div>
+          <div><span class="num mono">9</span><span class="lbl">districts trained on digital tools</span></div>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="photo-frame">
+          <!-- Replace src with your actual photo URL -->
+          <img src="https://ui-avatars.com/api/?name=Yogesh+Sharma&size=280&background=2f5d57&color=e7e2d1&font-size=0.5" alt="Yogesh Sharma" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- About -->
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head"><span class="tag mono">01</span><h2>About Me</h2></div>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>I work at the intersection of climate data and financial protection for smallholder farmers — designing index-based and indemnity-based insurance systems, and the platforms that run them. That means pulling satellite imagery, weather station records and field-collected data into one pipeline, then turning it into claims farmers can actually receive.</p>
+            <p>Over the past three years I've helped lead multi-district field implementations in Nepal, contributed to securing more than NPR 1 crore in incubation and project funding, and spent a lot of time in training rooms and rice fields teaching agents, technicians and farmers how to use the tools we build.</p>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="number">6+</span>
+              <span class="label">Districts Covered</span>
+            </div>
+            <div class="stat-card">
+              <span class="number">15+</span>
+              <span class="label">Projects Completed</span>
+            </div>
+            <div class="stat-card">
+              <span class="number">50+</span>
+              <span class="label">Training Sessions</span>
+            </div>
+            <div class="stat-card">
+              <span class="number">100%</span>
+              <span class="label">Passion for Impact</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-head"><span class="tag mono">02</span><h2>Experience</h2></div>
+        <div class="timeline">
+          <div class="role-item">
+            <div class="when mono">JUN 2026 — PRESENT</div>
+            <h3>Operations Officer &amp; Software Engineer</h3>
+            <div class="org">Bolaoo Rides Private Limited</div>
+            <ul>
+              <li>Lead software architecture and operational rollout of web and mobile platforms.</li>
+              <li>Built automated ingestion pipelines and interactive dashboards for real-time operational insight.</li>
+              <li>Developed secure systems for automated risk monitoring and streamlined workflow processing.</li>
+              <li>Manage day-to-day logistics and cross-functional workflows to keep delivery on track.</li>
+            </ul>
+          </div>
+          <div class="role-item">
+            <div class="when mono">SEP 2024 — NOV 2025</div>
+            <h3>Chief Operating Officer &amp; Software Engineer</h3>
+            <div class="org">Seed Innovations Private Limited</div>
+            <ul>
+              <li>Led development of web and mobile platforms for agricultural insurance — both index-based and indemnity-based products.</li>
+              <li>Designed data pipelines and dashboards integrating satellite, weather and farmer data.</li>
+              <li>Built digital systems for claims processing and risk monitoring.</li>
+              <li>Contributed to product design, system architecture and UI/UX.</li>
+            </ul>
+          </div>
+          <div class="role-item">
+            <div class="when mono">SEP 2023 — SEP 2024</div>
+            <h3>Data &amp; Risk Analyst</h3>
+            <div class="org">Seed Innovations Private Limited</div>
+            <ul>
+              <li>Analyzed 30+ years of rainfall data across multiple districts.</li>
+              <li>Developed machine learning models to classify drought and heavy-rainfall risk.</li>
+              <li>Supported risk modelling and insurance product design on a GIZ-funded potato &amp; orange insurance project.</li>
+              <li>Trained farmers and field staff on digital tools.</li>
+            </ul>
+          </div>
+          <div class="role-item">
+            <div class="when mono">MAR 2023 — SEP 2023</div>
+            <h3>Web Developer &amp; Data Analysis Intern</h3>
+            <div class="org">Seed Innovations Private Limited</div>
+            <ul>
+              <li>Built a real-time farmer data-collection web portal.</li>
+              <li>Developed dashboards for insurance companies and INGOs.</li>
+              <li>Ran training sessions for stakeholders.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery">
+      <div class="wrap">
+        <div class="section-head"><span class="tag mono">03</span><h2>Field Gallery</h2></div>
+        <div class="gallery-grid">
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <div class="gallery-placeholder">📸</div>
+            <div class="overlay"><span>Field training in Dhanusha</span></div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <div class="gallery-placeholder">🌾</div>
+            <div class="overlay"><span>Rice insurance rollout</span></div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <div class="gallery-placeholder">🤖</div>
+            <div class="overlay"><span>AI livestock identification pilot</span></div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <div class="gallery-placeholder">🌧️</div>
+            <div class="overlay"><span>Weather station visit</span></div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <div class="gallery-placeholder">📊</div>
+            <div class="overlay"><span>Dashboard demo with farmers</span></div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <div class="gallery-placeholder">🤝</div>
+            <div class="overlay"><span>Community engagement</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+      <span class="close">&times;</span>
+      <img id="lightboxImg" src="" alt="Gallery image" />
+    </div>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head"><span class="tag mono">04</span><h2>Projects &amp; Research</h2></div>
+        <div class="proj-grid">
+          <div class="proj-card">
+            <div class="when mono">2024 – 2025</div>
+            <h3>Agricultural Insurance Systems, Nepal</h3>
+            <p>Designed and implemented index-based and indemnity-based insurance across multiple districts, integrating satellite, weather and field data for risk modelling and decision support. Reached 1,000+ farmers across 6+ districts on projects funded by GIZ, CIMMYT and other partners, totalling $100,000+.</p>
+          </div>
+          <div class="proj-card">
+            <div class="when mono">2025</div>
+            <h3>AI-based Livestock Insurance — UNDP Pilot</h3>
+            <p>Implemented an AI-based livestock identification system using muzzle-pattern recognition; collected and processed image datasets, supported model validation and system deployment, authored a six-month project report, and trained insurance staff and field agents.</p>
+          </div>
+          <div class="proj-card">
+            <div class="when mono">2023 – 2024</div>
+            <h3>Satellite &amp; Climate Analytics for Agriculture</h3>
+            <p>Built satellite-based decision-support systems for crop monitoring and applied weather analytics for data-driven agricultural extension, supporting the early-stage development of a digital agriculture platform.</p>
+          </div>
+          <div class="proj-card">
+            <div class="when mono">2024</div>
+            <h3>GRAPE Project — GIZ Nepal</h3>
+            <p>Delivered hands-on digital-insurance and claims-settlement training for newly insured legume, potato, orange and cauliflower farmers across three districts in Nepal.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section>
+      <div class="wrap">
+        <div class="section-head"><span class="tag mono">05</span><h2>Publications</h2></div>
+        <div class="pub">
+          <span class="kind">RESEARCH ARTICLE · 2026</span>
+          Sharma, Y. Regression-based prediction and analysis of rainfall data for heavy rainfall and drought at Sikta Weather Station, Banke District, Nepal. Research Square Preprint. <a href="https://doi.org/10.21203/rs.3.rs-10366413/v1" target="_blank" rel="noopener">doi.org/10.21203/rs.3.rs-10366413/v1</a>
+        </div>
+        <div class="pub">
+          <span class="kind">UNDERGRADUATE THESIS</span>
+          Disaster risk profiling in agriculture in Kanchanpur District, Nepal.
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head"><span class="tag mono">06</span><h2>Skills</h2></div>
+        <div class="skills-grid">
+          <div class="grp"><span class="lbl mono">PROGRAMMING</span><p>Python, JavaScript, React</p></div>
+          <div class="grp"><span class="lbl mono">DATA SCIENCE</span><p>Pandas, NumPy, scikit-learn, TensorFlow</p></div>
+          <div class="grp"><span class="lbl mono">WEB DEVELOPMENT</span><p>Web applications, dashboards, APIs, React</p></div>
+          <div class="grp"><span class="lbl mono">TOOLING</span><p>Git, Docker, AWS, data pipelines</p></div>
+          <div class="grp"><span class="lbl mono">CLIMATE</span><p>Climate risk analysis &amp; modelling, remote sensing, weather-data integration</p></div>
+          <div class="grp"><span class="lbl mono">INSURANCE</span><p>Agricultural insurance design: index-based and indemnity-based products</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <div class="wrap">
+        <div class="section-head"><span class="tag mono">07</span><h2>Education &amp; Certifications</h2></div>
+        <div class="edu-grid">
+          <div>
+            <div class="edu-item">
+              <div class="deg">BSc (Hons) Computing — Software Engineering</div>
+              <div class="sch">Nami College, University of Northampton</div>
+            </div>
+            <div class="edu-item">
+              <div class="deg">High School</div>
+              <div class="sch">Pentagon International College</div>
+            </div>
+          </div>
+          <div>
+            <ul class="cert-list">
+              <li>Nature-based Solutions for Disaster &amp; Climate Resilience — UNEP, PEDRR, EU, SDG Academy</li>
+              <li>World Bank Group Youth Summit (2025)</li>
+              <li>Aspire Leaders Program — Aspire Institute (2025)</li>
+              <li>Python Libraries for Data Science</li>
+              <li>Statistics for Data Science — Simplilearn</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h2>Let's talk about data, farmers, or both.</h2>
+          <div class="contact-block">
+            <a href="mailto:yogeshpoudel7@gmail.com"><i class="fas fa-envelope"></i> yogeshpoudel7@gmail.com</a>
+            <a href="tel:+9779868179179"><i class="fas fa-phone"></i> +977 9868179179</a>
+            <span><i class="fas fa-location-dot"></i> Khajura-08, Nepalgunj, Nepal</span>
+          </div>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <div style="background:var(--paper-2); padding:24px; border-radius:12px; color:var(--ink);">
+            <h3 style="color:var(--ink); font-size:20px; margin-bottom:12px;">Quick Links</h3>
+            <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:10px;">
+              <li><a href="#about" style="color:var(--teal); border-bottom:1px solid transparent;">About</a></li>
+              <li><a href="#experience" style="color:var(--teal); border-bottom:1px solid transparent;">Experience</a></li>
+              <li><a href="#projects" style="color:var(--teal); border-bottom:1px solid transparent;">Projects</a></li>
+              <li><a href="#contact" style="color:var(--teal); border-bottom:1px solid transparent;">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="foot-note mono">References available on request. © 2026 Yogesh Sharma.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('active');
+    }
+
+    // Lightbox
+    function openLightbox(el) {
+      const lightbox = document.getElementById('lightbox');
+      const img = document.getElementById('lightboxImg');
+      const content = el.querySelector('.overlay span')?.textContent || 'Field Photo';
+      // Use a placeholder image with the text as a data URI
+      const text = encodeURIComponent(content);
+      img.src = `https://ui-avatars.com/api/?name=${text}&size=600&background=2f5d57&color=e7e2d1&font-size=0.4`;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('nav a, .footer-grid a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+          document.getElementById('navMenu').classList.remove('active');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
