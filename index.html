@@ -77,7 +77,7 @@
     .stat-card .number { font-family: 'Fraunces', serif; font-size: 36px; color: var(--teal); display: block; }
     .stat-card .label { font-size: 14px; color: #5a5344; margin-top: 4px; display: block; }
 
-    /* TIMELINE */
+    /* EXPERIENCE */
     .timeline { border-left: 1px solid var(--line); margin-left: 4px; }
     .role-item { position: relative; padding: 0 0 40px 28px; }
     .role-item:last-child { padding-bottom: 4px; }
@@ -188,7 +188,7 @@
       section { padding: 48px 0; }
       .hero { padding: 120px 0 48px; }
       .testimonial-carousel { padding: 0; }
-      .arrow-btn { display: none; } /* Hide arrows on small screens, users can swipe */
+      .arrow-btn { display: none; }
     }
   </style>
 </head>
@@ -236,7 +236,7 @@
       </div>
       <div class="hero-photo">
         <div class="photo-frame">
-          <img src="images/farmer_cheque.jpg" alt="Yogesh handing over an insurance claim cheque to a farmer" />
+          <img src="images/img_12.jpg" alt="Yogesh Sharma Professional Headshot" />
         </div>
       </div>
     </div>
@@ -250,7 +250,7 @@
           <div class="about-text">
             <p>I work at the intersection of climate data and financial protection for smallholder farmers — designing index-based and indemnity-based insurance systems, and the platforms that run them. That means pulling satellite imagery, weather station records and field-collected data into one pipeline, then turning it into claims farmers can actually receive.</p>
             <p>Over the past three years I've led multi-district field implementations in Nepal, contributed to securing more than NPR 1 crore in incubation and project funding, and spent a lot of time in training rooms teaching agents, technicians and farmers how to use the tools we build.</p>
-            <img src="images/accelerator_group.jpg" alt="Yogesh with his cohort at the Aadhyanta Accelerator Program" />
+            <img src="images/img_11.jpg" alt="Yogesh working at his laptop during an accelerator program" />
           </div>
           <div class="about-stats">
             <div class="stat-card"><span class="number">15+</span><span class="label">Districts Covered</span></div>
@@ -300,7 +300,6 @@
       </div>
     </section>
 
-    <!-- UPDATED SECTION: SCROLLABLE TESTIMONIALS -->
     <section id="impact" style="background: var(--paper-2);">
       <div class="wrap">
         <div class="section-head"><span class="tag mono">03</span><h2>Leadership &amp; Endorsements</h2></div>
@@ -309,49 +308,36 @@
           <button class="arrow-btn prev-btn" onclick="scrollTestimonials(-1)"><i class="fas fa-chevron-left"></i></button>
           
           <div class="testimonial-track" id="testimonialTrack">
-            <!-- 1. Suman Ghimire -->
             <div class="testimonial-card">
               <p>"Yogesh has been a cornerstone of our operations at PlantSat. His ability to translate complex satellite data into actionable climate risk insights for farmers is unmatched. He led our technical and operational teams with dedication, ensuring we delivered real impact on the ground."</p>
               <div class="author">— Suman Ghimire</div>
               <div class="role">CEO &amp; Founder, PlantSat (Seed Innovations Pvt. Ltd.)</div>
             </div>
-
-            <!-- 2. Sudip Poudel -->
             <div class="testimonial-card">
               <p>"Working with Yogesh on our agricultural and livestock insurance projects was a game-changer. He understood the nuances of the industry perfectly and built digital systems that were not only robust but also easy for our field staff and farmers to use. Truly a professional."</p>
               <div class="author">— Sudip Poudel</div>
               <div class="role">Head of Agriculture and Livestock Insurance, United Ajod Insurance</div>
             </div>
-
-            <!-- 3. Gaurav Jung Pandey -->
             <div class="testimonial-card">
               <p>"Yogesh is one of those rare engineers who deeply understands both the technology and the context. Whether it was designing AI-based livestock insurance or managing our digital platforms, his leadership and technical rigor consistently took our products to the next level."</p>
               <div class="author">— Gaurav Jung Pandey</div>
               <div class="role">Co-Founder, PlantSat (Seed Innovations Pvt. Ltd.)</div>
             </div>
-
-            <!-- 4. Gopal Jha -->
             <div class="testimonial-card">
               <p>"From field coordination to digital training, Yogesh managed the entire project lifecycle smoothly. He was instrumental in onboarding our field teams and ensuring that every farmer's claim was processed transparently through his digital systems."</p>
               <div class="author">— Gopal Jha</div>
               <div class="role">Project Head and Coordinator, PlantSat</div>
             </div>
-
-            <!-- 5. Dr. Till -->
             <div class="testimonial-card">
               <p>"The work delivered on our GIZ-funded program exceeded expectations. Yogesh and the team provided critical data insights and comprehensive discussions that paved the way for more resilient agricultural insurance frameworks in Nepal. A valuable partner for sustainable development."</p>
               <div class="author">— Dr. Till</div>
               <div class="role">Project Lead, GIZ Nepal</div>
             </div>
-
-            <!-- 6. Dr. Roshan Koju -->
             <div class="testimonial-card">
               <p>"Yogesh was one of the most proactive and technically gifted students I have taught. He has a rare ability to understand advanced AI concepts and apply them to real-world problems. His success in the agritech space comes as no surprise."</p>
               <div class="author">— Dr. Roshan Koju</div>
               <div class="role">Professor of AI, Naya-Aayam MultiDisciplinary Institute</div>
             </div>
-
-            <!-- 7. Nischal Khadka -->
             <div class="testimonial-card">
               <p>"Yogesh consistently demonstrated excellence in both his academic and professional pursuits. His strategic thinking and commitment to using technology for social good made him a standout student. He is a true asset to the tech community in Nepal."</p>
               <div class="author">— Nischal Khadka</div>
@@ -361,11 +347,10 @@
 
           <button class="arrow-btn next-btn" onclick="scrollTestimonials(1)"><i class="fas fa-chevron-right"></i></button>
         </div>
-
       </div>
     </section>
 
-    <!-- GALLERY -->
+    <!-- UPDATED GALLERY WITH NEW IMAGES -->
     <section id="gallery">
       <div class="wrap">
         <div class="section-head"><span class="tag mono">04</span><h2>Field Gallery</h2></div>
@@ -376,26 +361,27 @@
           <button class="tab-btn" onclick="openTab('accelerator')">Accelerators</button>
         </div>
 
-        <!-- Tab 1: Ground Impact -->
         <div class="tab-content active" id="ground">
-          <div class="gallery-item" onclick="openLightbox(this)"><img src="images/farmer_cheque.jpg" alt="Cheque Distribution" /><div class="overlay"><span>Insurance Payout Dhanusha</span></div></div>
-          <div class="gallery-item" onclick="openLightbox(this)"><img src="images/women_group.jpg" alt="Women's Cooperative Group" /><div class="overlay"><span>Women's Co-op Support</span></div></div>
-          <div class="gallery-item" onclick="openLightbox(this)"><img src="images/farmers_cheques_group.jpg" alt="Group of farmers with cheques" /><div class="overlay"><span>Climate Risk Insurance Distribution</span></div></div>
+          <div class="gallery-item" onclick="openLightbox(this)"><img src="images/img_1.jpg" alt="Farmers holding insurance cheques" /><div class="overlay"><span>Farmers Receiving Payouts</span></div></div>
+          <div class="gallery-item" onclick="openLightbox(this)"><img src="images/img_2.jpg" alt="Group holding NABIL Bank cheque" /><div class="overlay"><span>Official Cheque Handover</span></div></div>
+          <div class="gallery-item" onclick="openLightbox(this)"><img src="images/img_4.jpg" alt="Community group near house" /><div class="overlay"><span>Rural Community Engagement</span></div></div>
+          <div class="gallery-item" onclick="openLightbox(this)"><img src="images/img_6.jpg" alt="Ward office group photo" /><div class="overlay"><span>Ward Office Collaboration</span></div></div>
+          <div class="gallery-item" onclick="openLightbox(this)"><img src="images/img_7.jpg" alt="Big community group with mountains" /><div class="overlay"><span>Regional Community Outreach</span></div></div>
+          <div class="gallery-item" onclick="openLightbox(this)"><img src="images/img_13.jpg" alt="Teaching women in red chairs" /><div class="overlay"><span>FEEDFUTURE Training Session</span></div></div>
         </div>
 
-        <!-- Tab 2: Conferences & Training -->
         <div class="tab-content" id="conferences">
-          <div class="gallery-item" onclick="openLightbox(this)"><img src="images/team_booth.jpg" alt="Team Booth" /><div class="overlay"><span>International Digital Ag Forum Booth</span></div></div>
-          <div class="gallery-item" onclick="openLightbox(this)"><img src="images/conference_presentation.jpg" alt="Presentation" /><div class="overlay"><span>Stakeholder Presentation</span></div></div>
-          <div class="gallery-item" onclick="openLightbox(this)"><img src="images/international_badge.jpg" alt="ID Badge" /><div class="overlay"><span>International Forum Identity</span></div></div>
-          <div class="gallery-item" onclick="openLightbox(this)"><img src="images/banner_jump.jpg" alt="Jump at event banner" /><div class="overlay"><span>Celebrating Milestones</span></div></div>
+          <div class="gallery-item" onclick="openLightbox(this)"><img src="images/img_8.jpg" alt="PlantSat team with banner" /><div class="overlay"><span>PlantSat Core Team</span></div></div>
+          <div class="gallery-item" onclick="openLightbox(this)"><img src="images/img_3.jpg" alt="Training presentation with women seated" /><div class="overlay"><span>Digital Tools Training</span></div></div>
+          <div class="gallery-item" onclick="openLightbox(this)"><img src="images/img_5.jpg" alt="Close-up of training presentation" /><div class="overlay"><span>Interactive Workshop</span></div></div>
+          <div class="gallery-item" onclick="openLightbox(this)"><img src="images/img_9.jpg" alt="United Ajod AI Cow banner presentation" /><div class="overlay"><span>AI Livestock Insurance Launch</span></div></div>
+          <div class="gallery-item" onclick="openLightbox(this)"><img src="images/img_10.jpg" alt="Pointing at satellite map screen" /><div class="overlay"><span>Satellite Data Presentation</span></div></div>
         </div>
 
-        <!-- Tab 3: Accelerators -->
         <div class="tab-content" id="accelerator">
+          <div class="gallery-item" onclick="openLightbox(this)"><img src="images/img_11.jpg" alt="Yogesh at desk in accelerator" /><div class="overlay"><span>Aadhyanta Accelerator Program</span></div></div>
+          <div class="gallery-item" onclick="openLightbox(this)"><img src="images/banner_jump.jpg" alt="Jump at event banner" /><div class="overlay"><span>Celebrating Milestones</span></div></div>
           <div class="gallery-item" onclick="openLightbox(this)"><img src="images/consulting.jpg" alt="Consulting Session" /><div class="overlay"><span>Business Strategy Session</span></div></div>
-          <div class="gallery-item" onclick="openLightbox(this)"><img src="images/accelerator_group.jpg" alt="Accelerator Cohort" /><div class="overlay"><span>Aadhyanta Accelerator Cohort</span></div></div>
-          <div class="gallery-item" onclick="openLightbox(this)"><img src="images/livestock_project.jpg" alt="Livestock Project Launch" /><div class="overlay"><span>AI Livestock Insurance Launch</span></div></div>
         </div>
 
       </div>
@@ -412,7 +398,7 @@
         <div class="section-head"><span class="tag mono">05</span><h2>Projects &amp; Research</h2></div>
         <div class="proj-grid">
           <div class="proj-card">
-            <img src="images/livestock_project.jpg" alt="AI Livestock project group photo">
+            <img src="images/img_9.jpg" alt="AI Livestock project banner">
             <div class="proj-content">
               <div class="when mono">2025</div>
               <h3>AI-based Livestock Insurance — UNDP Pilot</h3>
@@ -420,7 +406,7 @@
             </div>
           </div>
           <div class="proj-card">
-            <img src="images/farmer_cheque.jpg" alt="Farmer receiving cheque">
+            <img src="images/img_1.jpg" alt="Farmers receiving cheque">
             <div class="proj-content">
               <div class="when mono">2024 – 2025</div>
               <h3>Agricultural Insurance Systems, Nepal</h3>
@@ -569,10 +555,9 @@
       document.body.style.overflow = 'auto';
     }
 
-    // Scroll Testimonials
     function scrollTestimonials(direction) {
       const track = document.getElementById('testimonialTrack');
-      const cardWidth = 350 + 32; // width + gap
+      const cardWidth = 350 + 32; 
       track.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
     }
 
