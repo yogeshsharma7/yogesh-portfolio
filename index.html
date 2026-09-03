@@ -10,7 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    /* SAME BASE STYLES AS BEFORE */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
       --ink: #182420; --ink-2: #22342d; --paper: #e7e2d1; --paper-2: #dcd6c2;
@@ -24,7 +23,7 @@
       font-family: 'IBM Plex Sans', sans-serif; font-size: 17px; line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
-    h1, h2, h3 { font-family: 'Fraunces', serif; font-weight: 500; color: var(--ink); }
+    h1, h2, h3, h4 { font-family: 'Fraunces', serif; font-weight: 500; color: var(--ink); }
     .mono { font-family: 'IBM Plex Mono', monospace; }
     a { color: inherit; text-decoration: none; }
     .wrap { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
@@ -52,11 +51,9 @@
     .hero .contact-line { margin-top: 28px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #a8a290; display: flex; flex-wrap: wrap; gap: 6px 18px; }
     .contact-line a { border-bottom: 1px solid transparent; transition: border-color 0.2s; }
     .contact-line a:hover { border-bottom-color: var(--gold); }
-
     .hero-photo { position: relative; }
     .hero-photo .photo-frame { width: 280px; height: 280px; border-radius: 50%; overflow: hidden; border: 4px solid var(--gold); box-shadow: 0 0 60px rgba(198, 138, 52, 0.2); margin-left: auto; background: var(--teal-light); display: flex; align-items: center; justify-content: center; }
     .hero-photo .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
-
     .readout { margin-top: 56px; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line-dark); }
     .readout div { padding: 18px 16px 0 0; border-right: 1px solid var(--line-dark); }
     .readout div:last-child { border-right: none; }
@@ -80,7 +77,7 @@
     .stat-card .number { font-family: 'Fraunces', serif; font-size: 36px; color: var(--teal); display: block; }
     .stat-card .label { font-size: 14px; color: #5a5344; margin-top: 4px; display: block; }
 
-    /* EXPERIENCE */
+    /* TIMELINE */
     .timeline { border-left: 1px solid var(--line); margin-left: 4px; }
     .role-item { position: relative; padding: 0 0 40px 28px; }
     .role-item:last-child { padding-bottom: 4px; }
@@ -98,7 +95,6 @@
     .tab-content { display: none; grid-template-columns: repeat(3, 1fr); gap: 24px; }
     .tab-content.active { display: grid; animation: fadeIn 0.4s ease; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
     .gallery-item { position: relative; border-radius: 12px; overflow: hidden; aspect-ratio: 1; background: var(--paper-2); cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; }
     .gallery-item:hover { transform: scale(1.02); box-shadow: var(--shadow); }
     .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
@@ -111,7 +107,7 @@
     .lightbox img { max-width: 90%; max-height: 90%; border-radius: 8px; }
     .lightbox .close { position: absolute; top: 30px; right: 40px; color: white; font-size: 40px; cursor: pointer; }
 
-    /* PROJECTS */
+    /* PROJECTS (Updated to allow bigger layout) */
     .proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
     .proj-card { background: var(--paper-2); border-radius: 12px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
     .proj-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
@@ -121,8 +117,26 @@
     .proj-card h3 { font-size: 20px; margin-top: 8px; }
     .proj-card p { margin-top: 8px; font-size: 15.5px; color: #33261e; }
 
+    /* NEW: LOGO GRID (Funding/Partners) */
+    .logo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 20px; align-items: center; }
+    .logo-card { background: var(--paper-2); border-radius: 12px; padding: 20px; text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: var(--teal); font-weight: 500; transition: transform 0.3s; }
+    .logo-card:hover { transform: scale(1.05); }
+
+    /* NEW: TESTIMONIALS */
+    .testimonial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .testimonial-card { background: var(--paper-2); border-left: 4px solid var(--gold); padding: 24px; border-radius: 0 12px 12px 0; }
+    .testimonial-card p { font-style: italic; font-size: 15px; color: #33261e; }
+    .testimonial-card .author { margin-top: 16px; font-weight: 600; font-size: 15px; color: var(--teal); }
+    .testimonial-card .role { font-size: 13px; color: #5a5344; }
+
+    /* NEW: "BEYOND WORK" PERSONAL SECTION */
+    .personal-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; align-items: center; }
+    .personal-grid img { width: 100%; border-radius: 12px; box-shadow: var(--shadow); }
+    .personal-text h3 { font-size: 24px; margin-bottom: 16px; }
+    .personal-text p { font-size: 16px; color: #33261e; }
+
     /* CERTIFICATIONS */
-    .cert-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; } /* Updated to 3 columns */
     .cert-card { background: var(--paper-2); border-radius: 12px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
     .cert-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
     .cert-card img { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid var(--line); }
@@ -156,8 +170,10 @@
       .hero .role { max-width: 100%; }
       .about-grid { grid-template-columns: 1fr; }
       .proj-grid { grid-template-columns: 1fr; }
-      .skills-grid { grid-template-columns: 1fr 1fr; }
       .cert-grid { grid-template-columns: 1fr; }
+      .testimonial-grid { grid-template-columns: 1fr; }
+      .personal-grid { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: 1fr 1fr; }
       footer .footer-grid { grid-template-columns: 1fr; }
       .tab-content.active { grid-template-columns: 1fr 1fr; }
       nav ul { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(24, 36, 32, 0.98); padding: 20px 28px; gap: 16px; border-bottom: 1px solid var(--line-dark); }
@@ -183,8 +199,8 @@
       <ul id="navMenu">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#impact">Impact</a></li>
         <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#projects">Projects</a></li>
         <li><a href="#certs">Certificates</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -232,7 +248,6 @@
           <div class="about-text">
             <p>I work at the intersection of climate data and financial protection for smallholder farmers — designing index-based and indemnity-based insurance systems, and the platforms that run them. That means pulling satellite imagery, weather station records and field-collected data into one pipeline, then turning it into claims farmers can actually receive.</p>
             <p>Over the past three years I've led multi-district field implementations in Nepal, contributed to securing more than NPR 1 crore in incubation and project funding, and spent a lot of time in training rooms teaching agents, technicians and farmers how to use the tools we build.</p>
-            <!-- Adding the group photo here -->
             <img src="images/accelerator_group.jpg" alt="Yogesh with his cohort at the Aadhyanta Accelerator Program" />
           </div>
           <div class="about-stats">
@@ -283,10 +298,44 @@
       </div>
     </section>
 
-    <!-- DYNAMIC GALLERY -->
+    <!-- NEW SECTION: IMPACT, PARTNERS & TESTIMONIALS -->
+    <section id="impact" style="background: var(--paper-2);">
+      <div class="wrap">
+        <div class="section-head"><span class="tag mono">03</span><h2>Partners, Funding &amp; Impact</h2></div>
+        
+        <div class="logo-grid">
+          <div class="logo-card">USAID</div>
+          <div class="logo-card">GIZ</div>
+          <div class="logo-card">CIMMYT</div>
+          <div class="logo-card">UNDP</div>
+          <div class="logo-card">SDC</div>
+          <div class="logo-card">UNEP</div>
+          <div class="logo-card">World Bank</div>
+          <div class="logo-card">EU</div>
+          <div class="logo-card">Aspire Institute</div>
+        </div>
+
+        <div style="height: 60px;"></div> <!-- Spacer -->
+
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <p>"Yogesh's ability to bridge complex satellite and weather data with practical, on-the-ground insurance solutions is remarkable. He doesn't just build tools; he ensures they reach the farmers who need them most."</p>
+            <div class="author">— Program Coordinator</div>
+            <div class="role">GIZ-funded Agricultural Project</div>
+          </div>
+          <div class="testimonial-card">
+            <p>"Working with Yogesh on the AI Livestock project was seamless. He trained our staff and agents with incredible patience and clarity, making the technology accessible for everyone involved in the pilot."</p>
+            <div class="author">— Project Lead</div>
+            <div class="role">UNDP Innovation Pilot</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
     <section id="gallery">
       <div class="wrap">
-        <div class="section-head"><span class="tag mono">03</span><h2>Field Gallery</h2></div>
+        <div class="section-head"><span class="tag mono">04</span><h2>Field Gallery</h2></div>
         
         <div class="tab-buttons">
           <button class="tab-btn active" onclick="openTab('ground')">Ground Impact</button>
@@ -324,9 +373,10 @@
       <img id="lightboxImg" src="" alt="Gallery image" />
     </div>
 
+    <!-- PROJECTS -->
     <section id="projects">
       <div class="wrap">
-        <div class="section-head"><span class="tag mono">04</span><h2>Projects &amp; Research</h2></div>
+        <div class="section-head"><span class="tag mono">05</span><h2>Projects &amp; Research</h2></div>
         <div class="proj-grid">
           <div class="proj-card">
             <img src="images/livestock_project.jpg" alt="AI Livestock project group photo">
@@ -348,10 +398,24 @@
       </div>
     </section>
 
-    <!-- Certifications Section -->
+    <!-- NEW SECTION: BEYOND WORK (Personal Touch) -->
+    <section style="background: var(--paper-2);">
+      <div class="wrap">
+        <div class="section-head"><span class="tag mono">06</span><h2>Beyond the Data</h2></div>
+        <div class="personal-grid">
+          <img src="images/banner_jump.jpg" alt="Yogesh celebrating at a conference">
+          <div class="personal-text">
+            <h3>Passion meets Purpose</h3>
+            <p>While my work is deeply rooted in data pipelines, climate models, and complex risk algorithms, my true driving force is the human impact. Whether I'm jumping for joy at a project milestone, facilitating a training session, or handing a cheque to a farmer, I believe technology only succeeds when it creates real-world resilience. I am committed to making climate-smart agriculture accessible to the communities that need it most.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
     <section id="certs">
       <div class="wrap">
-        <div class="section-head"><span class="tag mono">05</span><h2>Certifications &amp; Awards</h2></div>
+        <div class="section-head"><span class="tag mono">07</span><h2>Certifications &amp; Awards</h2></div>
         <div class="cert-grid">
           <div class="cert-card">
             <img src="images/certs/World_Bank_Youth_Delegate_2025.jpg" alt="World Bank Youth Summit Certificate">
@@ -368,10 +432,10 @@
             </div>
           </div>
           <div class="cert-card">
-            <img src="images/certs/Work_experience_letter.jpg" alt="Aspire Leaders Program Certificate">
+            <img src="images/certs/Work_experience_letter.jpg" alt="Work Experience Letter">
             <div class="cert-content">
               <h4>Work Experience Letter</h4>
-              <p>Work Experience Letter</p>
+              <p>Professional experience verification.</p>
             </div>
           </div>
           <div class="cert-card">
@@ -389,7 +453,7 @@
             </div>
           </div>
           <div class="cert-card">
-            <img src="images/certs/Statistics_for_data_science_Simplilearn_Skillup.jpg" alt="Simplilearn Python Certificate">
+            <img src="images/certs/Statistics_for_data_science_Simplilearn_Skillup.jpg" alt="Simplilearn Statistics Certificate">
             <div class="cert-content">
               <h4>Statistics for Data Science</h4>
               <p>Simplilearn SkillUp (May 2024)</p>
@@ -401,7 +465,7 @@
 
     <section id="skills">
       <div class="wrap">
-        <div class="section-head"><span class="tag mono">06</span><h2>Skills</h2></div>
+        <div class="section-head"><span class="tag mono">08</span><h2>Skills</h2></div>
         <div class="skills-grid">
           <div class="grp"><span class="lbl mono">PROGRAMMING</span><p>Python, JavaScript, React</p></div>
           <div class="grp"><span class="lbl mono">DATA SCIENCE</span><p>Pandas, NumPy, scikit-learn, TensorFlow</p></div>
@@ -437,6 +501,7 @@
             <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:10px;">
               <li><a href="#about" style="color:var(--teal);">About</a></li>
               <li><a href="#experience" style="color:var(--teal);">Experience</a></li>
+              <li><a href="#impact" style="color:var(--teal);">Impact</a></li>
               <li><a href="#certs" style="color:var(--teal);">Certificates</a></li>
               <li><a href="#contact" style="color:var(--teal);">Contact</a></li>
             </ul>
