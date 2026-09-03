@@ -71,8 +71,10 @@
     .about-text p { max-width: 64ch; color: #33261e; }
     .about-text p + p { margin-top: 16px; }
     .about-text img { width: 100%; border-radius: 12px; margin-top: 24px; box-shadow: var(--shadow); }
+    
+    /* UPDATED STATS GRID: 2 rows of 4 to match image height */
     .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    .stat-card { background: var(--paper-2); padding: 24px; border-radius: 12px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
+    .stat-card { background: var(--paper-2); padding: 24px; border-radius: 12px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; border: 1px solid var(--line); }
     .stat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
     .stat-card .number { font-family: 'Fraunces', serif; font-size: 36px; color: var(--teal); display: block; }
     .stat-card .label { font-size: 14px; color: #5a5344; margin-top: 4px; display: block; }
@@ -243,6 +245,7 @@
   </header>
 
   <main>
+    <!-- UPDATED ABOUT SECTION WITH 8 STAT BLOCKS -->
     <section id="about">
       <div class="wrap">
         <div class="section-head"><span class="tag mono">01</span><h2>About Me</h2></div>
@@ -252,11 +255,18 @@
             <p>Over the past three years I've led multi-district field implementations in Nepal, contributed to securing more than NPR 1 crore in incubation and project funding, and spent a lot of time in training rooms teaching agents, technicians and farmers how to use the tools we build.</p>
             <img src="images/img_11.jpg" alt="Yogesh working at his laptop during an accelerator program" />
           </div>
+          
           <div class="about-stats">
             <div class="stat-card"><span class="number">15+</span><span class="label">Districts Covered</span></div>
             <div class="stat-card"><span class="number">20+</span><span class="label">Projects Completed</span></div>
             <div class="stat-card"><span class="number">100+</span><span class="label">Training Sessions</span></div>
             <div class="stat-card"><span class="number">100%</span><span class="label">Passion for Impact</span></div>
+
+            <!-- New 4 Blocks Added Here -->
+            <div class="stat-card"><span class="number">30+</span><span class="label">Years of Rainfall Data Analyzed</span></div>
+            <div class="stat-card"><span class="number">20+</span><span class="label">Mobile &amp; Web Dashboards Built</span></div>
+            <div class="stat-card"><span class="number">6+</span><span class="label">Global Programs Participated</span></div>
+            <div class="stat-card"><span class="number">1cr+</span><span class="label">Project Funding Secured (NPR)</span></div>
           </div>
         </div>
       </div>
@@ -266,6 +276,19 @@
       <div class="wrap">
         <div class="section-head"><span class="tag mono">02</span><h2>Experience</h2></div>
         <div class="timeline">
+          
+          <div class="role-item">
+            <div class="when mono">JAN 2023 — SEP 2023</div>
+            <h3>Web Developer &amp; Data Analyst</h3>
+            <div class="org">Seed Innovations Private Limited (PlantSat)</div>
+            <ul>
+              <li>Developed and maintained the core web portals used for real-time farmer data collection and digital survey processes.</li>
+              <li>Performed foundational data analysis, cleaning, and visualization to support early-stage agricultural insurance models.</li>
+              <li>Collaborated with field teams to digitize manual records, ensuring data integrity across districts.</li>
+              <li>Supported the creation of dashboards for internal stakeholders and INGO partners.</li>
+            </ul>
+          </div>
+
           <div class="role-item">
             <div class="when mono">JUN 2026 — PRESENT</div>
             <h3>Operations Officer &amp; Software Engineer</h3>
@@ -294,6 +317,16 @@
               <li>Analyzed 30+ years of rainfall data across multiple districts.</li>
               <li>Developed machine learning models to classify drought and heavy-rainfall risk.</li>
               <li>Supported risk modelling on a GIZ-funded potato &amp; orange insurance project.</li>
+            </ul>
+          </div>
+          <div class="role-item">
+            <div class="when mono">MAR 2023 — SEP 2023</div>
+            <h3>Web Developer &amp; Data Analysis Intern</h3>
+            <div class="org">Seed Innovations Private Limited</div>
+            <ul>
+              <li>Built a real-time farmer data-collection web portal.</li>
+              <li>Developed dashboards for insurance companies and INGOs.</li>
+              <li>Ran training sessions for stakeholders.</li>
             </ul>
           </div>
         </div>
@@ -350,7 +383,6 @@
       </div>
     </section>
 
-    <!-- UPDATED GALLERY WITH NEW IMAGES -->
     <section id="gallery">
       <div class="wrap">
         <div class="section-head"><span class="tag mono">04</span><h2>Field Gallery</h2></div>
