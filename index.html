@@ -107,7 +107,7 @@
     .lightbox img { max-width: 90%; max-height: 90%; border-radius: 8px; }
     .lightbox .close { position: absolute; top: 30px; right: 40px; color: white; font-size: 40px; cursor: pointer; }
 
-    /* PROJECTS (Updated to allow bigger layout) */
+    /* PROJECTS */
     .proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
     .proj-card { background: var(--paper-2); border-radius: 12px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
     .proj-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
@@ -117,26 +117,26 @@
     .proj-card h3 { font-size: 20px; margin-top: 8px; }
     .proj-card p { margin-top: 8px; font-size: 15.5px; color: #33261e; }
 
-    /* NEW: LOGO GRID (Funding/Partners) */
+    /* LOGO GRID */
     .logo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 20px; align-items: center; }
     .logo-card { background: var(--paper-2); border-radius: 12px; padding: 20px; text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: var(--teal); font-weight: 500; transition: transform 0.3s; }
     .logo-card:hover { transform: scale(1.05); }
 
-    /* NEW: TESTIMONIALS */
+    /* TESTIMONIALS (UPDATED) */
     .testimonial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
     .testimonial-card { background: var(--paper-2); border-left: 4px solid var(--gold); padding: 24px; border-radius: 0 12px 12px 0; }
     .testimonial-card p { font-style: italic; font-size: 15px; color: #33261e; }
     .testimonial-card .author { margin-top: 16px; font-weight: 600; font-size: 15px; color: var(--teal); }
     .testimonial-card .role { font-size: 13px; color: #5a5344; }
 
-    /* NEW: "BEYOND WORK" PERSONAL SECTION */
+    /* PERSONAL SECTION */
     .personal-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; align-items: center; }
     .personal-grid img { width: 100%; border-radius: 12px; box-shadow: var(--shadow); }
     .personal-text h3 { font-size: 24px; margin-bottom: 16px; }
     .personal-text p { font-size: 16px; color: #33261e; }
 
     /* CERTIFICATIONS */
-    .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; } /* Updated to 3 columns */
+    .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
     .cert-card { background: var(--paper-2); border-radius: 12px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
     .cert-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
     .cert-card img { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid var(--line); }
@@ -298,10 +298,10 @@
       </div>
     </section>
 
-    <!-- NEW SECTION: IMPACT, PARTNERS & TESTIMONIALS -->
+    <!-- UPDATED SECTION: TESTIMONIALS & PARTNERS -->
     <section id="impact" style="background: var(--paper-2);">
       <div class="wrap">
-        <div class="section-head"><span class="tag mono">03</span><h2>Partners, Funding &amp; Impact</h2></div>
+        <div class="section-head"><span class="tag mono">03</span><h2>Leadership, Partners &amp; Impact</h2></div>
         
         <div class="logo-grid">
           <div class="logo-card">USAID</div>
@@ -318,15 +318,39 @@
         <div style="height: 60px;"></div> <!-- Spacer -->
 
         <div class="testimonial-grid">
+          <!-- Testimonial 1: Suman Ghimire -->
           <div class="testimonial-card">
-            <p>"Yogesh's ability to bridge complex satellite and weather data with practical, on-the-ground insurance solutions is remarkable. He doesn't just build tools; he ensures they reach the farmers who need them most."</p>
-            <div class="author">— Program Coordinator</div>
-            <div class="role">GIZ-funded Agricultural Project</div>
+            <p>"Yogesh has been a cornerstone of our operations at PlantSat. His ability to translate complex satellite data into actionable climate risk insights for farmers is unmatched. He led our technical and operational teams with dedication, ensuring we delivered real impact on the ground."</p>
+            <div class="author">— Suman Ghimire</div>
+            <div class="role">CEO &amp; Founder, PlantSat (Seed Innovations Pvt. Ltd.)</div>
           </div>
+
+          <!-- Testimonial 2: Sudip Poudel -->
           <div class="testimonial-card">
-            <p>"Working with Yogesh on the AI Livestock project was seamless. He trained our staff and agents with incredible patience and clarity, making the technology accessible for everyone involved in the pilot."</p>
-            <div class="author">— Project Lead</div>
-            <div class="role">UNDP Innovation Pilot</div>
+            <p>"Working with Yogesh on our agricultural and livestock insurance projects was a game-changer. He understood the nuances of the industry perfectly and built digital systems that were not only robust but also easy for our field staff and farmers to use. Truly a professional."</p>
+            <div class="author">— Sudip Poudel</div>
+            <div class="role">Head of Agriculture and Livestock Insurance, United Ajod Insurance</div>
+          </div>
+
+          <!-- Testimonial 3: Gaurav Jung Pandey -->
+          <div class="testimonial-card">
+            <p>"Yogesh is one of those rare engineers who deeply understands both the technology and the context. Whether it was designing AI-based livestock insurance or managing our digital platforms, his leadership and technical rigor consistently took our products to the next level."</p>
+            <div class="author">— Gaurav Jung Pandey</div>
+            <div class="role">Co-Founder, PlantSat (Seed Innovations Pvt. Ltd.)</div>
+          </div>
+
+          <!-- Testimonial 4: Gopal Jha -->
+          <div class="testimonial-card">
+            <p>"From field coordination to digital training, Yogesh managed the entire project lifecycle smoothly. He was instrumental in onboarding our field teams and ensuring that every farmer's claim was processed transparently through his digital systems."</p>
+            <div class="author">— Gopal Jha</div>
+            <div class="role">Project Head and Coordinator, PlantSat</div>
+          </div>
+
+          <!-- Testimonial 5: Dr. Till (GIZ Nepal) -->
+          <div class="testimonial-card">
+            <p>"The work delivered on our GIZ-funded program exceeded expectations. Yogesh and the team provided critical data insights and comprehensive discussions that paved the way for more resilient agricultural insurance frameworks in Nepal. A valuable partner for sustainable development."</p>
+            <div class="author">— Dr. Till</div>
+            <div class="role">Project Lead, GIZ Nepal</div>
           </div>
         </div>
       </div>
@@ -345,7 +369,7 @@
 
         <!-- Tab 1: Ground Impact -->
         <div class="tab-content active" id="ground">
-          <div class="gallery-item" onclick="openLightbox(this)"><img src="images/farmer_cheque.jpg" alt="Cheque Distribution 1" /><div class="overlay"><span>Insurance Payout Dhanusha</span></div></div>
+          <div class="gallery-item" onclick="openLightbox(this)"><img src="images/farmer_cheque.jpg" alt="Cheque Distribution" /><div class="overlay"><span>Insurance Payout Dhanusha</span></div></div>
           <div class="gallery-item" onclick="openLightbox(this)"><img src="images/women_group.jpg" alt="Women's Cooperative Group" /><div class="overlay"><span>Women's Co-op Support</span></div></div>
           <div class="gallery-item" onclick="openLightbox(this)"><img src="images/farmers_cheques_group.jpg" alt="Group of farmers with cheques" /><div class="overlay"><span>Climate Risk Insurance Distribution</span></div></div>
         </div>
@@ -398,7 +422,7 @@
       </div>
     </section>
 
-    <!-- NEW SECTION: BEYOND WORK (Personal Touch) -->
+    <!-- PERSONAL SECTION -->
     <section style="background: var(--paper-2);">
       <div class="wrap">
         <div class="section-head"><span class="tag mono">06</span><h2>Beyond the Data</h2></div>
