@@ -7,7 +7,22 @@
   <title>Login | Yogesh Sharma Portfolio</title>
 </head>
 <body>
-  <!-- This loads the Decap CMS login page -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    // REPLACE THE URL BELOW WITH YOUR EXACT NETLIFY URL
+    const NETLIFY_SITE_URL = "https://yogeshsharma-portfolio.netlify.app"; 
+
+    window.CMS_MANUAL_INIT = true;
+    document.addEventListener('DOMContentLoaded', function() {
+      DecapCMS.init({
+        backend: {
+          name: 'git-gateway',
+          branch: 'main',
+          identity_url: NETLIFY_SITE_URL + '/.netlify/identity',
+          gateway_url: NETLIFY_SITE_URL + '/.netlify/git',
+        }
+      });
+    });
+  </script>
 </body>
 </html>
